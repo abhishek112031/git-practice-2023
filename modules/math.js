@@ -25,6 +25,26 @@ function multiPlication(...rest){
     }
     return m;
 }
-module.exports={
-    sum,multiPlication
+
+function factorial(n){
+
+    if(!isNaN(n)|| n>=0){
+
+        if(n==0||n==1){
+            return 1;
+        }
+        let res=1;
+        for(let i=1;i<=n ;i++){ 
+                res*=i; 
+        }
+        return res;
+    }
+    else{
+        return `${n} is not a valid input`;
+    }
+    
 }
+module.exports={
+    sum,multiPlication,factorial
+}
+
